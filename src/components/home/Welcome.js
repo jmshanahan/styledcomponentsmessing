@@ -8,9 +8,7 @@ const Welcome = () => {
   );
 };
 
-const WelcomeCentre = styled.div`
-  position: absolute;
-  top: 200px;
+const WelcomeCentre = styled.section`
   margin: 200px, auto;
 `;
 

@@ -7,12 +7,16 @@ const About = () => {
     <div>
       <Header />
       <AboutWrapper>
-        <p>About</p>
+        <h1>About</h1>
       </AboutWrapper>
     </div>
   );
 };
 const AboutWrapper = styled.section`
-  margin: 10px, auto;
+  margin: 10px;
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
 `;
 export default About;
