@@ -6,7 +6,7 @@ import Title from "../Title";
 const Header = ({ className }) => {
   return (
     <section className={className}>
-      <Title title="Joseph" color="Aqua" />
+      <Title title="Joseph" />
       <Nav />
     </section>
   );
@@ -15,7 +15,9 @@ const Header = ({ className }) => {
 export default styled(Header)`
   display: flex;
   align-items: center;
-  background: blue;
+  background: ${props => props.theme.bannerBackground};
+  color: ${props => props.theme.bannerColor};
+
   position: static;
   width: 100%;
 `;

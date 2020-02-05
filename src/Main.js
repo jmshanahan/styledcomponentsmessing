@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GlobalStyles from "./components/globals/Globalstyles";
+import { ThemeProvider } from "styled-components";
+import { standardTheme } from "./components/globals/Themes";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Resume from "./pages/Resume";
 import Content from "./pages/Content";
 function Main() {
+  const [theme, setTheme] = useState(standardTheme);
+
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <BrowserRouter>
         <Switch>
@@ -19,7 +23,7 @@ function Main() {
           <Route path="/resume" component={Resume} />
         </Switch>
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 }
 

@@ -17,8 +17,8 @@ const Globals = createGlobalStyle`
     body{
         ${setFont.main};
         font-size:100%;
-        color: ${setColor.mainBlack};
-        background: ${setColor.mainWhite};
+        color: ${props => props.theme.mainBlack};
+        background: ${props => props.theme.bodyBackground};
     }
     h1{
         font-size: 3em;

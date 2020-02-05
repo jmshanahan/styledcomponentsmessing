@@ -1,26 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import Navlink from "../components/globals/Navlink";
 const Nav = ({ className }) => {
   return (
     <nav className={className}>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/content">Content</NavLink>
+      <Navlink to="/">Home</Navlink>
+      <Navlink to="/about">About</Navlink>
+      <Navlink to="/content">Content</Navlink>
     </nav>
   );
 };
-const NavLink = styled(Link)`
-  padding: 20px;
-  color: white;
-
-  text-decoration: none;
-  &:hover {
-    color: red;
-    background: blue;
-  }
-`;
 
 export default styled(Nav)`
   color: white;
